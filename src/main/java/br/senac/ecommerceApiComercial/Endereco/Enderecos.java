@@ -47,6 +47,11 @@ public class Enderecos {
     @Column(name = "COMPLEMENTO")
     private String complemento;
 
+    public enum Tipo{
+        Entrega,
+        Cobranca
+    }
+
     public enum Estado{
         AC,
         AL,
@@ -76,9 +81,6 @@ public class Enderecos {
         SE,
         TO
     }
-    public enum Tipo{
-        Entrega,
-        Cobranca
-    }
+
 
 }
