@@ -13,13 +13,16 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 @Entity(name = "CONTATO")
-public class Contato {
+public class Contatos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    public Clientes clientes;
+    @NotNull
+    @OneToOne
+    @JoinColumn(name = "idCliente")
+    private Clientes cliente;
 
     @NotNull(message = "O email deve ser preenchido")
     @Size(min = 1, max = 50, message = "o emial deve conter entre 1 e 50 caracteres")

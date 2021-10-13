@@ -1,7 +1,6 @@
 package br.senac.ecommerceApiComercial.cliente;
 
 
-import br.senac.ecommerceApiComercial.Contato.Contato;
 import lombok.*;
 
 import javax.persistence.*;
