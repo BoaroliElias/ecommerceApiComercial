@@ -19,22 +19,23 @@ public class Enderecos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // verificar relacionamento
     @NotNull
     @OneToOne
-    @JoinColumn(name = "idCliente")
+    @JoinColumn(name = "ID_CLIENTE")
     private Clientes cliente;
 
-    @NotNull
+    @NotNull(message = "A cidade deve ser preenchida")
     @Size(min = 1, max = 30, message = "A cidade deve conter entre 1 e 30 caracteres")
     @Column(name = "CIDADE")
     private String Cidade;
 
-    @NotNull
+    @NotNull(message = "O CEP deve ser preenchido")
     @Size(min = 1, max = 8, message = "O CEP deve conter entre 1 e 8 caracteres")
     @Column(name = "CEP")
     private Integer CEP;
 
-    @NotNull
+    @NotNull(message = "O logradouro deve ser preenchido")
     @Size(min = 1, max = 50)
     @Column(name = "LOGRADOURO")
     private String Logradouro;

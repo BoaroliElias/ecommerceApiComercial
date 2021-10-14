@@ -23,17 +23,19 @@ public class Vendas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // verificar relacionamento
     @NotNull
     @ManyToOne
-    @Column(name = "CLIENTE")
+    @Column(name = "ID_CLIENTE")
     private Clientes cliente;
 
+    // verificar relacionamento
     @NotNull
     @OneToOne
-    @Column(name = "ENDERECO")
+    @JoinColumn(name = "ID_ENDERECO")
     private Enderecos endereco;
 
-    @NotNull
+    @NotNull(message = "A data de emissao deve ser preenchida")
     @Column(name = "DATA_EMISSAO")
     private LocalDate dataEmissao;
 

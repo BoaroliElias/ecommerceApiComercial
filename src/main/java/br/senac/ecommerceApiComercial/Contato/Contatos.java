@@ -19,6 +19,7 @@ public class Contatos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //verificar relacionamento
     @NotNull
     @OneToOne
     @JoinColumn(name = "idCliente")
@@ -29,7 +30,7 @@ public class Contatos {
     @Column(name = "EMAIL")
     private String email;
 
-    @NotNull
+    @NotNull(message = "O telefone deve ser preenchido")
     @Size(min = 1, max = 15)
     @Column(name = "TELEFONE")
     private Integer telefone;
@@ -38,6 +39,7 @@ public class Contatos {
     @Column(name = "OBS")
     private String obs;
 
+    // verificar o atributo recovery
     public enum Recuperacao{
         Email,
         Telefone
