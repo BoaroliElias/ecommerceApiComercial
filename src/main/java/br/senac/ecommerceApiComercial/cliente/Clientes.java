@@ -42,10 +42,10 @@ public class Clientes {
     @Column(name = "DT_NASCIMENTO")
     private LocalDate dataNascimento;
 
-    // verifiacar anotações de ralcionamento
-    @JoinColumn
-    @ManyToOne
-    private Contatos contato;
+//    // verifiacar anotações de ralcionamento
+//    @JoinColumn
+//    @ManyToOne
+//    private Contatos contato;
 
     public enum Status{
         ATIVO,

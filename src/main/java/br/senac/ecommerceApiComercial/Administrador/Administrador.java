@@ -18,7 +18,7 @@ public class Administrador {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @NotNull(message = "O usuário deve ser preenchido")
     @Size(min = 1, max = 100, message = "O usuário deve conter entre 1 e 100 caracteres")
     @Column(name = "USUARIO")
     private String usuario;

@@ -20,10 +20,10 @@ public class ItensVenda {
     private Long id;
 
     // veifficar relacionamento
-    @JoinColumn
-    @ManyToOne
-    @Column(name = "ID_VENDA")
-    private Vendas venda;
+//    @JoinColumn
+//    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Vendas.class)
+//    @Column(name = "ID_VENDA")
+//    private Vendas venda;
 
     //  como trazer o idProduto do outro microserviço
 

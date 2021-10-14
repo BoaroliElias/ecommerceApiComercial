@@ -23,11 +23,11 @@ public class Vendas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // verificar relacionamento
+     //verificar relacionamento
     @NotNull
-    @ManyToOne
-    @Column(name = "ID_CLIENTE")
-    private Clientes cliente;
+//    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Clientes.class)
+//    @Column(name = "ID_CLIENTE")
+//    private Clientes cliente;
 
     // verificar relacionamento
     @NotNull

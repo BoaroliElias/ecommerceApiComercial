@@ -20,10 +20,10 @@ public class Enderecos {
     private Long id;
 
     // verificar relacionamento
-    @NotNull
-    @OneToOne
-    @JoinColumn(name = "ID_CLIENTE")
-    private Clientes cliente;
+//    @NotNull
+////    @OneToOne
+//    @JoinColumn(name = "ID_CLIENTE")
+//    private Clientes cliente;
 
     @NotNull(message = "A cidade deve ser preenchida")
     @Size(min = 1, max = 30, message = "A cidade deve conter entre 1 e 30 caracteres")
